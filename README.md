@@ -1,20 +1,11 @@
-# Precision Metal Works — Agenda de entrevistas
+# PMW Interviews v2
 
-Sitio listo para publicarse con **Supabase + Vercel**.
+1. Conserva `logo-pmw.jpg` de tu carpeta anterior.
+2. Ejecuta `supabase_setup.sql` en Supabase SQL Editor.
+3. En Supabase Authentication > Providers, habilita Anonymous Sign-Ins.
+4. Confirma que el bucket `documents` sea privado.
+5. Reemplaza en GitHub: index.html, app.js, admin.html, admin.js, styles.css y config.js.
+6. Vercel volverá a publicar automáticamente.
 
-## Qué incluye
-- Flujo por Mexicali, puesto, datos, fecha y horario.
-- Horarios de lunes a viernes, entrevistas de 30 minutos.
-- Bloqueo real de dobles reservaciones.
-- Confirmación, documentos y botón de Maps.
-- Panel `admin.html` con inicio de sesión y exportación CSV.
-
-## Para convertirlo en un link real
-1. Crea un proyecto gratuito en Supabase.
-2. En SQL Editor, pega y ejecuta `supabase.sql`.
-3. En Authentication > Users, crea el usuario de Recursos Humanos.
-4. En Project Settings > API, copia `Project URL` y `anon public key` dentro de `config.js`.
-5. Sube esta carpeta a Vercel como proyecto estático.
-6. El enlace de candidatos será la URL principal; el panel será `/admin.html`.
-
-Nunca pongas la `service_role key` en `config.js`; solo usa la clave `anon public`.
+La columna `document_url` guarda una ruta privada, no una URL pública.
+El panel crea enlaces firmados temporales de 5 minutos.
